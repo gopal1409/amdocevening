@@ -4,3 +4,8 @@
    14  yum install docker-ce docker-ce-cli containerd.io
    15  systemctl start docker
    16  systemctl enable docker
+
+how to launch your first container
+22  docker container run --publish 80:80 --detach nginx
+   23  docker ps
+
