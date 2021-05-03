@@ -46,3 +46,13 @@ docker networking
    63  docker network inspect bridge
 
 
+docker internal network
+73  docker network create my_app_net
+   74  docker network ls
+   75  docker inspect my_app_net
+   76  docker run -d --name proxy --network my_app_net nginx: alpine
+   77  docker container run -d --name proxy --network my_app_net nginx:alpine
+   78  docker container run -d --name my_nginx --network my_app_net nginx:alpine
+   79  docker ps
+   80  docker exec -it my_nginx ping proxy
+   81  docker exec -it proxy ping my_nginx
