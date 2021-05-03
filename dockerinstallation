@@ -19,3 +19,25 @@ docker images
    29  history
    30  docker images
    31  docker image inspect 62d49f9bab67
+
+docker storage
+42  docker container inspect cd1a
+   43  cd /var/lib/docker/containers/cd1a4ab406db5f45ba85dd55d7bd3c7ff6f3c8790735fbb41bff24d43a4418c0/
+   44  ls
+   45  cd \
+   46  cd \root
+   47  cd /root
+   48  clear
+   49  docker run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql
+   50  docker ps
+   51  docker volumels
+   52  docker volume ls
+   53  docker volume inspect mysql-db
+   54  docker ps
+   55  docker stop b87
+   56  docker ps -a
+   57  docker rm b87
+   58  docker ps -a
+   59  docker volume ls
+   60  history
+
