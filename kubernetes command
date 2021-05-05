@@ -21,4 +21,13 @@ Deploy First Pod
    kubectl get deploy
    kubectl get rs
    kubectl get pod
+   
+   Describe in Deployment Replicaset Pod
+   54  kubectl describe deploy myapp3-deploy
+   55  kubectl get rs
+   56  kubectl describe rs myapp3-deployment-656889595c
+   57  kubectl get pod
+   58  kubectl descirbe pod myapp3-deployment-656889595c-2xbnk
+   59  kubectl describe pod myapp3-deployment-656889595c-2xbnk
+
 
