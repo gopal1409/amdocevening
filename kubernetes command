@@ -11,4 +11,14 @@ Deploy First Pod
    50  kubectl get pod
    51  kubectl get pod -o wide
    53  kubectl describe pod my-first-pod
+   
+   How to apply an manifest file in kubernetes
+   git clone https://github.com/gopal1409/amdocsmanifestevening.git
+   ls
+   cd amdocsmanifestevening
+   ls
+   kubectl apply -f deploy.yml
+   kubectl get deploy
+   kubectl get rs
+   kubectl get pod
 
