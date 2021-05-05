@@ -5,3 +5,10 @@ mkdir -p $HOME/.kube
   CNI plugin
   kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
 kubectl create -f https://docs.projectcalico.org/manifests/custom-resources.yaml
+
+Deploy First Pod
+49  kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0
+   50  kubectl get pod
+   51  kubectl get pod -o wide
+   53  kubectl describe pod my-first-pod
+
