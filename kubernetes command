@@ -33,6 +33,13 @@ Deploy First Pod
    rollback
    92  kubectl set image deployment/myapp3-deployment myapp3-container=piuma/phpsysinf --record
    93  kubectl get rs
+   
+   scaling
+    104  kubectl scale deployment.v1.apps/myapp3-deployment --replicas=10
+  105  kubectl get rs
+  106  kubectl autoscaling deployment.v1.apps/myapp3-deployment --min=10 --max=15 --cpu-percent=80
+  107  kubectl autoscale deployment.v1.apps/myapp3-deployment --min=10 --max=15 --cpu-percent=80
+
    94  kubectl get pod
    95  kubectl describe pod myapp3-deployment-5767d6dd74-4hfcm
    96  kubectl rollout history deployment.v1.apps/myapp3-deployment
