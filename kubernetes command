@@ -29,5 +29,15 @@ Deploy First Pod
    57  kubectl get pod
    58  kubectl descirbe pod myapp3-deployment-656889595c-2xbnk
    59  kubectl describe pod myapp3-deployment-656889595c-2xbnk
+   
+   rollback
+   92  kubectl set image deployment/myapp3-deployment myapp3-container=piuma/phpsysinf --record
+   93  kubectl get rs
+   94  kubectl get pod
+   95  kubectl describe pod myapp3-deployment-5767d6dd74-4hfcm
+   96  kubectl rollout history deployment.v1.apps/myapp3-deployment
+   97  kubectl rollout undo deployment.v1.apps/myapp3-deployment --to-revision=2
+   98  kubectl rollout undo deployment.v1.apps/myapp3-deployment --to-revision=3
+   99  kubectl rollout undo deployment.v1.apps/myapp3-deployment
 
 
